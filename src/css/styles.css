@@ -16,3 +16,138 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+
+}
+
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.image-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.image-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 14px;
+  color: #555;
+}
+
+.image-info p {
+  margin: 4px 0;
+}
+
+
+.submit-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.submit-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.submit-input:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+
+  border-color: #007bff;
+}
+
+
+.submit-btn, .load-more {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-more {
+  display: block;
+  margin: 20px auto;
+ 
+}
+
+.submit-btn:hover, .load-more:hover {
+  background-color: #0056b3;
+
+}
+
+.submit-btn:active, .load-more:active {
+  background-color: #003f7f;
+
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
+}
+
+
+.loader {
+  display: none;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
